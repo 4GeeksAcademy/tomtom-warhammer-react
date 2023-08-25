@@ -1,12 +1,51 @@
+.container{
+    width:900px;
+    display:flex;
+    justify-content: center;
+  
+    ;
+}
+body{background-image: url("https://c4.wallpaperflare.com/wallpaper/769/549/313/warhammer-warhammer-40k-battle-space-marine-warhammer-40k-hd-wallpaper-preview.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;}
 
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+.box{
+    padding: 30px;
+    margin:10px;
+    background-color: grey;
+    width:400px;
+    border-radius: 5px;
+}
+.chess-clock {
+    text-align: center;
+  }
+  
+  .player {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .active {
+    background-color: #e0e0e0;
+  }
+  
+  .time {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
