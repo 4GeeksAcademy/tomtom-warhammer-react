@@ -7,19 +7,28 @@
 }
 body{background-image: url("https://c4.wallpaperflare.com/wallpaper/769/549/313/warhammer-warhammer-40k-battle-space-marine-warhammer-40k-hd-wallpaper-preview.jpg") ;
     background-repeat: no-repeat;
-    background-size: cover;}
+    background-size: cover;
+}
+.listicles{
+  justify-content: center;
+    display:flex;
+    flex-direction: column;
+}
 
 .box{
     padding: 30px;
     margin:10px;
     background-color: grey;
-    width:400px;
+    width:600px;
     border-radius: 5px;
+    font-weight:bold;
+    color:white;
+    border: 2px solid black;
 }
 .chess-clock {
     text-align: center;
   }
-  
+ 
   .player {
     text-align: center;
     padding: 10px;
@@ -48,4 +57,52 @@ body{background-image: url("https://c4.wallpaperflare.com/wallpaper/769/549/313/
     margin: 0 10px;
     cursor: pointer;
   }
+
+ .buttons{display: flex;}
+ 
+ .buttone{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    margin-top: 10px;
+}
+ .block-container{
+  display: flex;
+  justify-content: center;
+ 
+
+ }
+  .text{
+   display: flex;
+   align-items:top;
+    justify-content: center;
+  }
+  .text-with-border {
+   
+    color: white; /* Make the text content transparent */
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black; /* Apply multiple shadows to create the border effect */
+    background-clip: text; /* Clip the background to the text content */
+    display: inline-block; /* Ensure the inline element takes up space */
+    padding: 8px; /* Add padding to create space between text and border */
+  }
+  .text-with-borders{
+   
+    color: white; /* Make the text content transparent */
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black; /* Apply multiple shadows to create the border effect */
+    background-clip: text; /* Clip the background to the text content */
+    display: flex;
+    padding: 8px; /* Add padding to create space between text and border */
+  }
+  .primary{
+    display:flex;
+    justify-content: center;
   
+  
+    align-items: center;
+  }
+  .card-liste{
+   display: flex;
+    background-color: grey;
+    font-size: 20px;
+    justify-content: center;
+  }

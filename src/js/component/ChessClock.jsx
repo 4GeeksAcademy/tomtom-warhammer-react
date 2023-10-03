@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './index.css';
 
 function ChessClock() {
-  const [player1Time, setPlayer1Time] = useState(5400); // 90 minutes in seconds
-  const [player2Time, setPlayer2Time] = useState(5400); // 90 minutes in seconds
+  const initialTime = 5400; // 90 minutes in seconds
+
+  const [player1Time, setPlayer1Time] = useState(initialTime);
+  const [player2Time, setPlayer2Time] = useState(initialTime);
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -31,6 +32,13 @@ function ChessClock() {
     setIsRunning(prevIsRunning => !prevIsRunning);
   };
 
+  const handleReset = () => {
+    setPlayer1Time(initialTime);
+    setPlayer2Time(initialTime);
+    setIsRunning(false);
+    setCurrentPlayer(1);
+  };
+
   return (
     <div className="chess-clock">
       <div className={`player ${currentPlayer === 1 && 'active'}`}>
@@ -50,6 +58,7 @@ function ChessClock() {
       <div className="controls">
         <button onClick={handleStartPause}>{isRunning ? 'Pause' : 'Start'}</button>
         <button onClick={handleSwitchPlayer}>Switch Player</button>
+        <button onClick={handleReset}>Reset</button>
       </div>
     </div>
   );

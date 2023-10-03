@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CardDeckBuilder = () => {
+const CardDeckguilder = () => {
   const [cardDeck, setCardDeck] = useState([]);
   const [drawnCards, setDrawnCards] = useState([]);
 
@@ -78,18 +78,18 @@ const CardDeckBuilder = () => {
 
   return (
     <div>
-      <div className='buttons'>
+      <div className='buttone'>
         <button onClick={buildDeck}>Build Deck</button>
         <button onClick={drawOneCard} disabled={cardDeck.length === 0}>Draw 1 Card</button>
-        <button onClick={drawTwoCards} disabled={cardDeck.length < 2}>Draw 2 Cards</button>
+      
       </div>
       <div className='block-container'>
         {drawnCards.length > 0 && (
           <div>
             Drawn Cards:
-            <ul className='card-list'>
+            <ul className='card-liste'>
               {drawnCards.map((card) => (
-                <li key={card.index}>
+                <li key={card.index}className='listicles'>
                   <span className='text-with-border'>{card.title}</span>
                   <span className='text-with-border'>{card.description}</span>
                   <button onClick={() => discardCard(card.index)}>Discard</button>
@@ -103,4 +103,4 @@ const CardDeckBuilder = () => {
   );
 };
 
-export default CardDeckBuilder;
+export default CardDeckguilder;
